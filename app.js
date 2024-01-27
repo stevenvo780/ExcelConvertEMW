@@ -9,7 +9,7 @@ function handleFileUpload(event) {
     const phoneLengthInput = parseInt(document.getElementById('phoneLengthInput').value);
 
     if (fileInput.files.length === 0) {
-        alert('Please select a file.');
+        alert('Por favor, selecciona un archivo.');
         return;
     }
 
@@ -34,9 +34,10 @@ function processExcel(data, phoneColumn, prefix, phoneLength) {
 
             let phone = phoneNumberString.startsWith(prefix) ? phoneNumberString.substring(prefix.length) : phoneNumberString;
             if (phone.length >= phoneLength) {
-                item['Prefix'] = prefix;
-                item['Phone'] = phone;
+                item['Prefijo'] = prefix;
+                item['Número de Teléfono'] = phone;
             }
+            delete item[phoneColumn];
         }
         return item;
     });
@@ -48,5 +49,5 @@ function processExcel(data, phoneColumn, prefix, phoneLength) {
 }
 
 document.getElementById('downloadBtn').addEventListener('click', () => {
-    XLSX.writeFile(newWorkbook, 'processed.xlsx');
+    XLSX.writeFile(newWorkbook, 'archivo_procesado.xlsx');
 });

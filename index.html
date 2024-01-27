@@ -1,35 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excel Processor</title>
+    <title>Procesador de Excel</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h2 class="mt-4">Excel Processor</h2>
+        <h2 class="mt-4">Procesador de Excel</h2>
         <form id="form">
             <div class="form-group">
-                <label for="fileInput">Upload Excel File:</label>
+                <label for="fileInput">Subir Archivo Excel:</label>
                 <input type="file" class="form-control-file" id="fileInput" accept=".xlsx">
             </div>
             <div class="form-group">
-                <label for="phoneColumnInput">Phone Column Name:</label>
-                <input type="text" class="form-control" id="phoneColumnInput" placeholder="Enter phone column name">
+                <label for="phoneColumnInput">Nombre de la Columna de Teléfono:</label>
+                <input type="text" class="form-control" id="phoneColumnInput" placeholder="Ingresa el nombre de la columna">
             </div>
             <div class="form-group">
-                <label for="prefixInput">Prefix:</label>
-                <input type="text" class="form-control" id="prefixInput" placeholder="Enter prefix">
+                <label for="prefixInput">Prefijo:</label>
+                <input type="text" class="form-control" id="prefixInput" placeholder="Ingresa el prefijo">
             </div>
             <div class="form-group">
-                <label for="phoneLengthInput">Phone Number Minimum Length:</label>
-                <input type="number" class="form-control" id="phoneLengthInput" placeholder="Enter minimum length">
+                <label for="phoneLengthInput">Longitud Mínima del Número de Teléfono:</label>
+                <input type="number" class="form-control" id="phoneLengthInput" placeholder="Ingresa la longitud mínima">
             </div>
-            <button type="submit" class="btn btn-primary">Process</button>
+            <button type="submit" class="btn btn-primary">Procesar</button>
         </form>
         <br>
-        <button id="downloadBtn" class="btn btn-success" style="display:none;">Download Processed File</button>
+        <button id="downloadBtn" class="btn btn-success" style="display:none;">Descargar Archivo Procesado</button>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
