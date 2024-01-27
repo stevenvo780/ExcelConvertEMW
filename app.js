@@ -33,7 +33,7 @@ function processExcel(data, phoneColumn, prefix, phoneLength) {
                 .replace(/\s+/g, '').replace(/-/g, '').split(':::')[0].replace(/\+/g, '');
 
             let phone = phoneNumberString.startsWith(prefix) ? phoneNumberString.substring(prefix.length) : phoneNumberString;
-            if (phone.length >= phoneLength) {
+            if (phone.length === phoneLength) {
                 item['Prefijo'] = prefix;
                 item['Número de Teléfono'] = phone;
             }
